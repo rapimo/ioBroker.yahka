@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "yahka",
-        "version": "0.8.2",
+        "version": "0.8.3",
         "news": {
+            "0.8.3": {
+                "en": "add scaleBooleanHK conversion function",
+                "de": "fügt scaleBooleanHK conversion Funktion hinzu"
+            },     
             "0.8.2": {
                 "en": "Removed a bug which flooded logging when starting/stopping the adapter which led to excessive memory consumption",
                 "de": "Fehler behoben durch den extrem viele Log ausgaben beim starten/beenden des Adapters geschrieben wurden - dies hat zu extremem RAM Verbrauch geführt."
