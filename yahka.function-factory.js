@@ -504,6 +504,33 @@ var conversionFactory = {
             }
         };
     },
+    "scaleBooleanHK": function (adapter, parameters) {
+        var paramArray = JSON.parse(parameters);
+        function getParameter(name) {
+            if (paramArray === undefined)
+                return undefined;
+            var value = paramArray[name];
+            if (value === undefined)
+                return undefined;
+            if (typeof value === 'number')
+                return value;
+            else
+                return parseInt(value);
+        }
+        return {
+            toHomeKit: function (value) {
+                var newValue = value ? true : false;
+                adapter.log.debug('scaleBooleanHK: converting value to homekit: ' + value + ' to ' + newValue);
+                return newValue;
+            },
+            toIOBroker: function (value) {
+                var homeKitMax = getParameter("iobroker.max");
+                var newValue = value ? homeKitMax : 0;
+                adapter.log.debug('scaleBooleanHK: converting value to ioBroker: ' + value + ' to ' + newValue);
+                return newValue;
+            }
+        };
+    },
     "inverse": function (adapter, parameters) {
         function castToNumber(value) {
             if (value === undefined)
