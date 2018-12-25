@@ -116,7 +116,7 @@
                 "inverse",
                 "scaleInt",
                 "scaleFloat",
-                "scaleBooleanHK"
+                "scaleBooleanHK",
                 "HomematicDirectionToHomekitPositionState",
                 "HomematicControlModeToHomekitHeathingCoolingState"
             ]
