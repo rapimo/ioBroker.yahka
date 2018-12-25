@@ -9,8 +9,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var $ = require("jquery");
+
+
 function isBridgeConfig(config) {
     if (config === undefined)
         return false;
